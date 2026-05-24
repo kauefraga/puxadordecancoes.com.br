@@ -1,0 +1,143 @@
+---
+import SongCard from './SongCard.astro';
+
+type Song = {
+  slug: string;
+  lyricsPreview: string;
+  hasMore: boolean;
+  id: number;
+  title: string;
+  tags: string[];
+  publishedAt: Date;
+};
+
+interface Props {
+  songs: Song[];
+}
+
+const { songs } = Astro.props;
+
+const allTags = [...new Set(songs.flatMap((s) => s.tags))].sort();
+---
+
+<div class="tags-filtro" id="tags-filtro">
+  <button class="tag-btn ativa" data-tag="">Todas</button>
+  {
+    allTags.map((tag) => (
+      <button class="tag-btn" data-tag={tag}>
+        {tag}
+      </button>
+    ))
+  }
+</div>
+
+<div id="lista-cancoes" class="lista-cancoes">
+  {
+    songs.map((song, index) => (
+      <div
+        class="card-wrapper"
+        data-title={song.title.toLowerCase()}
+        data-tags={song.tags.join(',').toLowerCase()}
+        style={`animation-delay: ${index * 40}ms; display: flex; flex-direction: column;`}
+      >
+        <SongCard
+          id={song.id}
+          title={song.title}
+          tags={song.tags}
+          slug={song.slug}
+          lyricsPreview={song.lyricsPreview}
+          hasMore={song.hasMore}
+        />
+      </div>
+    ))
+  }
+</div>
+
+<div id="sem-resultados" class="sem-resultados hidden">
+  <span>🔍</span>
+  <p>
+    Nenhuma canção encontrada para "<strong id="termo-sem-resultado"></strong>"
+  </p>
+</div>
+
+<script>
+  const searchInput = document.getElementById('pesquisa') as HTMLInputElement;
+  const cards = document.querySelectorAll<HTMLElement>('.card-wrapper');
+  const tagButtons = document.querySelectorAll<HTMLButtonElement>('.tag-btn');
+  const noResults = document.getElementById('sem-resultados')!;
+  const noResultsTerm = document.getElementById('termo-sem-resultado')!;
+  const counter = document.getElementById('contador-cancoes')!;
+
+  let activeTag = '';
+  let searchTerm = '';
+
+  function filter() {
+    let visible = 0;
+    cards.forEach((card) => {
+      const title = card.dataset.title ?? '';
+      const tags = card.dataset.tags ?? '';
+      const matchesTag =
+        !activeTag || tags.split(',').includes(activeTag.toLowerCase());
+      const matchesSearch =
+        !searchTerm || title.includes(searchTerm) || tags.includes(searchTerm);
+
+      const show = matchesTag && matchesSearch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    const label = visible !== 1 ? 'canções' : 'canção';
+    counter.textContent = `${visible} ${label}`;
+
+    if (visible === 0) {
+      noResults.classList.remove('hidden');
+      noResultsTerm.textContent = searchTerm || activeTag;
+    } else {
+      noResults.classList.add('hidden');
+    }
+  }
+
+  tagButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeTag = btn.dataset.tag ?? '';
+      searchTerm = '';
+      searchInput.value = '';
+      tagButtons.forEach((b) => b.classList.toggle('ativa', b === btn));
+      filter();
+    });
+  });
+
+  searchInput.addEventListener('input', () => {
+    searchTerm = searchInput.value.trim().toLowerCase();
+    activeTag = '';
+    tagButtons.forEach((b) =>
+      b.classList.toggle('ativa', b.dataset.tag === ''),
+    );
+    filter();
+  });
+
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      document
+        .getElementById('cancoes')
+        ?.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'k') {
+      e.preventDefault();
+      if (document.activeElement === searchInput) searchInput.blur();
+      else {
+        searchInput.focus();
+        searchInput.select();
+      }
+    }
+  });
+
+  document.getElementById('btn-ver-cancoes')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('cancoes')?.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>

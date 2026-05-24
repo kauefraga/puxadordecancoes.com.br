@@ -1,0 +1,21 @@
+{
+  "name": "puxadordecancoes.com.br",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "wrangler dev",
+    "astro": "astro",
+    "deploy": "bun run build && wrangler deploy"
+  },
+  "dependencies": {
+    "astro": "^6.3.7"
+  },
+  "devDependencies": {
+    "wrangler": "^4.94.0"
+  }
+}

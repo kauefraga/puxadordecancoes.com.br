@@ -1,0 +1,24 @@
+---
+import { getCollection, type CollectionEntry, render } from 'astro:content';
+import SongLayout from '../../layouts/SongLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('songs');
+
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'songs'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<SongLayout title={entry.data.title} tags={entry.data.tags}>
+  <Content />
+</SongLayout>

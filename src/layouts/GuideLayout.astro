@@ -1,0 +1,38 @@
+---
+import Layout from './Layout.astro';
+import AlertBanner from '../components/AlertBanner.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+---
+
+<Layout title={title}>
+  <AlertBanner />
+  <main
+    style="flex:1; padding: 48px; max-width: 760px; margin: 0 auto; width: 100%;"
+  >
+    <a
+      href="/"
+      style="font-family:'Oswald',sans-serif; font-size:0.85rem; letter-spacing:0.08em;
+      text-transform:uppercase; color:var(--olive-leaf); text-decoration:none;
+      display:inline-block; margin-bottom:32px;"
+    >
+      ← Voltar
+    </a>
+    {
+      description && (
+        <p style="color:var(--text-muted); margin-bottom:16px;">
+          {description}
+        </p>
+      )
+    }
+    <article style="line-height:1.8; color:var(--text-dark);">
+      <slot />
+    </article>
+  </main>
+  <Footer />
+</Layout>

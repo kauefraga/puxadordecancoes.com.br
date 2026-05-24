@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import AlertBanner from '../components/AlertBanner.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import Footer from '../components/Footer.astro';
+import SongsList from '../components/SongsList.astro';
+
+const entries = await getCollection('songs');
+
+const songs = entries
+  .sort((a, b) => a.data.id - b.data.id)
+  .map((entry) => {
+    const lines = entry.body!.split('\n');
+    const firstStanza = entry.body!.split('\n\n')[0];
+    const previewLines = firstStanza
+      .split('\n')
+      .slice(0, 4)
+      .join('\n')
+      .trimStart();
+    const hasMore = lines.length > 4;
+    return {
+      ...entry.data,
+      slug: entry.data.slug,
+      lyricsPreview: previewLines,
+      hasMore,
+    };
+  });
+---
+
+<Layout title="Canções">
+  <AlertBanner />
+  <SiteHeader />
+
+  <main>
+    <section id="cancoes">
+      <div class="section-header">
+        <h2>CANÇÕES</h2>
+        <span id="contador-cancoes">{songs.length} canções</span>
+      </div>
+
+      <SongsList songs={songs} client:load />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

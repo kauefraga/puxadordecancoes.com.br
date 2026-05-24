@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Acervo completo de canções militares de TFM do Exército Brasileiro. Letras de canções de infantaria, caveira, comandos, caatinga, selva e muito mais. Puxe diferentes canções no padrão e eleve o moral da sua tropa."
+    />
+    <meta
+      name="keywords"
+      content="canções militares, canções de TFM, puxador de canções, canções do exército, letras militares, canções de infantaria, caveira, comandos, caatinga, selva, tropa, TFM, treinamento físico militar, canção militar brasileira"
+    />
+    <meta name="theme-color" content="#606c38" />
+    <link rel="canonical" href="https://puxadordecancoes.com.br/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <ClientRouter />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
