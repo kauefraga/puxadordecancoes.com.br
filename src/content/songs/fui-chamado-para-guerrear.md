@@ -2,7 +2,7 @@
 id: 3
 slug: "fui-chamado-para-guerrear"
 title: "Fui Chamado Para Guerrear"
-tags: ["TFM", "selva", "exército brasileiro"]
+tags: ["tfm", "selva", "eb"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
 

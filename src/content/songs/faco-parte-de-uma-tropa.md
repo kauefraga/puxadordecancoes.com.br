@@ -2,9 +2,10 @@
 id: 10
 slug: "faco-parte-de-uma-tropa"
 title: "Faço Parte de Uma Tropa"
-tags: ["TFM", "infantaria"]
+tags: ["tfm", "infantaria"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Faço parte de uma tropa
 Que tem fibra e moral
 Disciplina elevada

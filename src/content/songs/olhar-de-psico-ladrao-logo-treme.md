@@ -2,9 +2,10 @@
 id: 4
 slug: "olhar-de-psico-ladrao-logo-treme"
 title: "Olhar de Psico, Ladrão Logo Treme"
-tags: ["TFM", "ROTAM", "polícia militar"]
+tags: ["tfm", "rotam", "pm"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Guiado por Deus, ninguém me segura
 Guiado por Deus, ninguém me segura
 Fuzil na mão e a pistola na cintura

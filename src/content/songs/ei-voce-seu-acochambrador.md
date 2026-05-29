@@ -2,9 +2,10 @@
 id: 6
 slug: "ei-voce-seu-acochambrador"
 title: "Ei, Você, Seu Acochambrador"
-tags: ["TFM"]
+tags: ["tfm"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Ei, você, seu acochambrador
 Prepare sua carcaça, pois você vai sentir dor
 Ei, você que não tem energia

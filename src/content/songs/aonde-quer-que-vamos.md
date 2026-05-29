@@ -2,9 +2,10 @@
 id: 2
 slug: "aonde-quer-que-vamos"
 title: "Aonde Quer Que Vamos"
-tags: ["TFM", "exército brasileiro"]
+tags: ["tfm", "eb"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Por onde quer que vamos
 Todos querem saber
 Quem somos nós

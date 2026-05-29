@@ -2,9 +2,10 @@
 id: 5
 slug: "quando-eu-morrer-quero-ir-de-fal-e-de-beretta"
 title: "Quando Eu Morrer, Quero Ir de FAL e de Beretta"
-tags: ["TFM", "infantaria", "exército brasileiro"]
+tags: ["tfm", "infantaria", "eb"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Quando eu morrer, quero ir de FAL e de Beretta
 Chegar no inferno e dar um tiro no capeta
 E o capeta vai gritar, desesperado

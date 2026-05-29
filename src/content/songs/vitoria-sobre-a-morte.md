@@ -5,7 +5,9 @@ title: "Vitória Sobre a Morte"
 tags: ["caatinga", "infantaria"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
-Vitória Sobre a Morte
+
+Vitória
+Vitória
 
 Vitória sobre a morte no sertão do Ceará
 Vitória sobre a morte no sertão do Ceará

@@ -2,9 +2,10 @@
 id: 11
 slug: "guerreiro-de-caatinga"
 title: "Guerreiro de Caatinga"
-tags: ["caatinga", "infantaria", "exército brasileiro"]
+tags: ["caatinga", "infantaria", "eb"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Sob o Sol forte do meu sertão
 Surge um combatente com o fuzil na mão
 Uniforme bem adaptado

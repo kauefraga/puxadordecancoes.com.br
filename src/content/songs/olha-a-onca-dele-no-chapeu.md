@@ -2,9 +2,10 @@
 id: 8
 slug: "olha-a-onca-dele-no-chapeu"
 title: "Olha a Onça Dele No Chapéu"
-tags: ["TFM", "selva"]
+tags: ["tfm", "selva"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Olha a onça dele no chapéu
 Olha que essa onça é o seu troféu
 Olha que essa onça não é fácil de se ter

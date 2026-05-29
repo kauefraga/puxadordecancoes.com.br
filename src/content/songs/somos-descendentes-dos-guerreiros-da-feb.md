@@ -2,9 +2,10 @@
 id: 15
 slug: "somos-descendentes-dos-guerreiros-da-feb"
 title: "Somos descendentes dos guerreiros da FEB"
-tags: ["exército brasileiro", "artilharia"]
+tags: ["eb", "artilharia"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Somos descendentes dos guerreiros da FEB
 Artilharia de campanha leve
 Artilharia no terreno vai lançar

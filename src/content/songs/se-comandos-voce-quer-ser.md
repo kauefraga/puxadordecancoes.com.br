@@ -2,9 +2,10 @@
 id: 13
 slug: "se-comandos-voce-quer-ser"
 title: "Se Comandos Você Quer Ser"
-tags: ["comandos", "forças especiais", "exército brasileiro"]
+tags: ["comandos", "fe", "eb"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Mochila
 Pesada
 O FAL

@@ -2,7 +2,7 @@
 id: 1
 slug: "demonios-camuflados"
 title: "Demônios Camuflados Surgem da Escuridão"
-tags: ["exército brasileiro"]
+tags: ["eb"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
 

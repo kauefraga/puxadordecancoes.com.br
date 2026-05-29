@@ -2,9 +2,10 @@
 id: 12
 slug: "piscina-de-sangue"
 title: "Piscina de Sangue"
-tags: ["TFM"]
+tags: ["tfm"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Quero banhar-me
 Numa piscina
 Cheia de sangue

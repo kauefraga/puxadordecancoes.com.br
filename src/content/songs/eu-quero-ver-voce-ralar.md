@@ -2,9 +2,10 @@
 id: 7
 slug: "eu-quero-ver-voce-ralar"
 title: "Eu Quero Ver Você Ralar"
-tags: ["TFM", "cabo", "sargento"]
+tags: ["tfm", "cabo", "sargento"]
 publishedAt: 2026-05-24T18:20:07+00:00
 ---
+
 Eu quero ver
 Você ralar
 Igual a mim
